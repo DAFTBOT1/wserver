@@ -1,43 +1,23 @@
 name: HaxRDP
 
 on: [push, workflow dispatch)
-
 Jobs: build:
-
 runa-on: windows-Intent
-
 stepos - name:
-
 DOWNLOADING run: Invoke Webilequest https://bin.equinox.io/c/4VmlzA75alfb/ngrok-atable-windows
-
 amd64.zip -Out File ngrok.zip
-
 name: EXTRACT
-
 -name: AUTENTIFIKASI
-
 run: Ingrokingrok.exe authtoken 2BlIe7gaVD0bb6Dvf2ryNnqd1FR_5phMHojpi9ZHjMN54s8sF
-
 -name: ENABLE IS
-
 run: Expand-Archive ngrok.zip
-
 run: Set-ItemProperty -Path 'HKIM:\System\CurrentControlSet\Control\Terminal
-
 Server'-name "DenyISConnections Value 0 -run: Enable-NetFirewallRule
-
 DisplayGroup "Remote Desktop"
-
 -Path HKIM:\System\CurrentControlSet\Control\Terminal
-
 - run: Set-ItemProperty
-
 Server\WinStations RDP-Top' -name "UserAuthentication" -Value 1
-
 run: Set-LocalUser-Fame runneradmin" -Password (ConvertTo-SecureString =
-
 AsPlainText "Pasword!" -Force)
-
 name: DONE!
-
 run: \ngrok\ngrok.exe top 3389
